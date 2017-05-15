@@ -18,11 +18,11 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Medical.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="Person.cpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ER.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +30,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Person.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

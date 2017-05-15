@@ -12,8 +12,16 @@ class Medical {
 private:
 	int maxSeverity;
 	queue<Person*> helper;
+	int timeRange;
+	int num_served;
 
-
+public:
+	int getNum_Served() {
+		return num_served;
+	}
+	int getMax_Severity() {
+		return maxSeverity;
+	}
 
 
 
