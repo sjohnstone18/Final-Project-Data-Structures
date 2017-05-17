@@ -9,6 +9,19 @@ class Random {
 		Random() {
 			srand((unsigned int)std::time(0));
 		}
+		Random(int seed) {
+			srand(seed);
+		}
+
+		
+		int next_int(int n) {
+			return int(next_double() * n);
+		}
+
+		
+		double next_double() {
+			return double(rand()) / RAND_MAX;
+		}
 
 
 };
