@@ -13,9 +13,11 @@ int main() {
 	cout << "Please enter the rate of Patients arriving in patients per hour: ";
 	cin >>rate;
 	ER* simulation = new ER(docs, nurses, maxtime, rate);
-
-
-
+	do {
+		simulation->update();
+	} while (simulation->isdone() == false);
+	
+	
 
 
 

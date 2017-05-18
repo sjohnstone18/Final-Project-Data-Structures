@@ -14,6 +14,10 @@ private:
 	int timein;
 
 public:
+	bool operator<(Person& better) {
+		return this.severity < better.getSeverity();
+	}
+
 	string getName() {
 		return name;
 	}

@@ -15,8 +15,8 @@ using namespace std;
 class ER {
 private:
 	vector<Medical *> staff;
-	vector <Person *> lowpriority; //this needs to change to priority queue
-	vector <Person *> highpriority;
+	priority_queue <Person *, Person.getSeverity(), int> lowpriority; //this needs to change to priority queue
+	priority_queue <Person *> highpriority;
 	Person* population[2000];
 	int clock;//current time in minutes
 	int maxTime; //how long to run simulation
@@ -34,7 +34,13 @@ public:
 		maxTime = maxtime;
 		hurtRateHour = rate;
 	}
+	bool isdone() {
+		if (clock >= maxTime)
+			return true;
+		else
+			return false;
 
+	}
 	void update()
 	{
 		for (int i = 0; i < staff.size(); i++) {
@@ -42,20 +48,20 @@ public:
 				if (typeid(staff[i]) == typeid(Doctor)) {			//if its a doctor, check high priority first. 
 					if (!highpriority.empty())
 					{
-						staff[i]->helper.push(highpriority.front());
-						highpriority.erase(highpriority.begin());
+						staff[i]->helper.push(highpriority.top());
+						highpriority.pop();
 					}
 					else if (!lowpriority.empty())
 					{
-						staff[i]->helper.push(lowpriority.front());
-						lowpriority.erase(lowpriority.begin());
+						staff[i]->helper.push(lowpriority.top());
+						lowpriority.pop();
 					}
 				}
 				if (typeid(staff[i]) == typeid(Nurse)) {				//if its a Nurse, only check low priority
 					if (!lowpriority.empty())
 					{
-						staff[i]->helper.push(lowpriority.front());
-						lowpriority.erase(lowpriority.begin());
+						staff[i]->helper.push(lowpriority.top());
+						lowpriority.pop();
 					}
 				}
 			}
@@ -71,7 +77,7 @@ public:
 			else
 				lowpriority.push_back(newpatient1);
 		}
-		if (random->next_int(60) > 45) {								//DOES 2 TO REDUCE TO PREVENT 60 PER HOUR TURNINGINTO EXACTLY 1/MIN, AND ALLOWS FOR 2 IN 1 MINUTE
+		if (random->next_int(60) > 45) {								//DOES 2 TO REDUCE TO PREVENT 60 PER HOUR TURNING INTO EXACTLY 1/MIN, AND ALLOWS FOR 2 IN 1 MINUTE
 			Person* newpatient1 = population[random->next_int(2000)];	
 			newpatient1->setSeverity(random->next_int(19) + 1);			
 			newpatient1->setTimeIn(clock);								
