@@ -20,12 +20,12 @@ int main() {
 	
 	ifstream file1;
 	ifstream file2;
-	file1.open("C:\\Users\\sjohn\\Desktop\\Final-Project-Data-Structures\\Final project\\residents_of_273ville.txt");
+	file1.open("..\\residents_of_273ville.txt");
 	if (file1.fail()) {
 		std::cout << "ERROR file1 failed: ";
 		return 0;
 	}
-	file2.open("C:\\Users\\sjohn\\Desktop\\Final-Project-Data-Structures\\Final project\\surnames_of_273ville.txt");
+	file2.open("..\\surnames_of_273ville.txt");
 	if (file2.fail()) {
 		cout << "ERROR file2 failed";
 		return 0;
