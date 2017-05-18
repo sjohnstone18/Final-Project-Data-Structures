@@ -57,7 +57,8 @@ void opt2(ER* sim) {
 }
 
 void opt3(ER* sim) {
-	cout << "Total patients treated:";
+	cout << "Total visits: " << sim->getNumberServed() << endl;
+	cout << "Average wait time: " << (sim->getTotaltime() / sim->getNumberServed()) << endl << endl;
 }
 
 
