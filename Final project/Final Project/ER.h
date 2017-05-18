@@ -83,7 +83,20 @@ public:
 		//int sev = random->next_int(19) + 1;
 		if (random.next_int(60) < hurtRateHour) {
 			Person* newpatient1 = population[random.next_int(2000)];	//picks person from the array of population
-			newpatient1->setSeverity(random.next_int(19) + 1);			//assigns severity.  does 19+1 to guarantee no severities of 0
+			int rand1 = random.next_int(10);
+			if (rand1 < 1) {
+				int rand2 = random.next_int(5);
+				newpatient1->setSeverity(rand2 + 16);
+			}
+			else if (rand1 < 3) {
+				int rand3 = random.next_int(5);
+				newpatient1->setSeverity(rand3 + 11);
+			}
+			else {
+				int rand4 = random.next_int(10);
+				newpatient1->setSeverity(rand4 + 1);
+			}
+	
 			newpatient1->setTimeIn(clock);								//sets start time
 			if (newpatient1->getSeverity() > 10)						//sends to highpriority if higher than 10
 				highpriority.push(newpatient1);
