@@ -7,7 +7,8 @@
 class Random {
 	public:
 		Random() {
-			srand((unsigned int)std::time(0));
+			srand((unsigned int)time(0));
+			//srand(0);
 		}
 		Random(int seed) {
 			srand(seed);

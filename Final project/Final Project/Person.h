@@ -47,4 +47,13 @@ public:
 
 };
 
+class Compare {
+public:
+	bool operator()(Person* p1, Person* p2)
+	{
+		return p1->getSeverity() < p2->getSeverity();
+	}
+};
+
+
 #endif 

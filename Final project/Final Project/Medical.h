@@ -2,9 +2,9 @@
 #ifndef Medical_h
 #define Medical_h
 #include <iostream>
-#include "Person.h"
-#include "Random.h"
 #include <queue>
+#include "Random.h"
+#include "Person.h"
 using namespace std;
 
 extern Random random;

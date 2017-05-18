@@ -2,12 +2,14 @@
 #ifndef ER_h
 #define ER_h
 #include <iostream>
+#include <queue>
+#include "Random.h"
 #include "Person.h"
 #include "Medical.h"
 #include "Doctor.h"
 #include "Nurse.h"
-#include "Random.h"
-#include <queue>
+
+
 using namespace std;
 
 Random random;
@@ -15,8 +17,8 @@ Random random;
 class ER {
 private:
 	vector<Medical *> staff;
-	priority_queue <Person *> lowpriority; //this needs to change to priority queue
-	priority_queue <Person *> highpriority;
+	priority_queue <Person *, vector<Person*>, Compare> lowpriority; //this needs to change to priority queue
+	priority_queue <Person *, vector<Person*>, Compare> highpriority;
 	
 	int clock;//current time in minutes
 	int maxTime; //how long to run simulation
