@@ -10,11 +10,12 @@ int menu(int u) {
 		cout << "SIMULATION STATS:" << endl;
 		cout << "-----------------" << endl;
 		cout << "1) Find patient" << endl;
-		cout << "2) General stats" << endl;
-		cout << "3) Exit" << endl;
+		cout << "2) List patients" << endl;
+		cout << "3) General stats" << endl;
+		cout << "4) Exit" << endl;
 		cout << "Select: ";
 		cin >> u;
-	} while (u != 1 && u != 2 && u != 3);
+	} while (u != 1 && u != 2 && u != 3 && u != 4);
 	return u;
 }
 
@@ -53,6 +54,10 @@ void opt2(ER* sim) {
 			cout << endl;
 		}
 	}
+}
+
+void opt3(ER* sim) {
+	cout << "Total patients treated:";
 }
 
 
@@ -110,12 +115,13 @@ int main() {
 			opt2(simulation);
 		}
 		if (user == 3) {
+			opt3(simulation);
+		}
+		if (user == 4)
+		{
 			break;
 		}
 	} while (user);
-
-
-
 
 	return 0;
 }
