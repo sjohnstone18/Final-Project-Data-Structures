@@ -31,7 +31,7 @@ void opt1(ER* sim) {
 		{
 			cout << "Patient history:" << endl;
 			for (int j = 0; j < sim->population[i]->getHistory().size(); j++) {
-				cout << "Visit #" << (j + 1) << " severity: " << sim->population[i]->getHistory()[j] << endl << endl;
+				cout << "Visit #" << (j + 1) << " severity: " << sim->population[i]->getHistory()[j] << endl;
 			}
 			found = true;
 		}
@@ -39,6 +39,7 @@ void opt1(ER* sim) {
 	if (found == false) {
 		cout << "Could not find patient." << endl;
 	}
+	cout << endl;
 }
 
 void opt2(ER* sim) {
