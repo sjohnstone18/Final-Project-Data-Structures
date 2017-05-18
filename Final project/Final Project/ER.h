@@ -32,6 +32,7 @@ public:
 		for (int i = 0; i < Nurses; i++) {
 			staff.push_back(new Nurse);
 		}
+		clock = 0;
 		maxTime = maxtime;
 		hurtRateHour = rate;
 	}
@@ -67,7 +68,7 @@ public:
 				}
 			}
 		}																//end of Doctor update system
-																		//start of new pateint entering
+																		//start of new patient entering
 		Random *random = new Random();
 		int randon = random->next_int(hurtRateHour);
 		int perp = random->next_int(2000);
@@ -90,6 +91,12 @@ public:
 			else
 				lowpriority.push(newpatient2);
 		}
+
+
+
+
+
+
 
 		clock++;
 	}
