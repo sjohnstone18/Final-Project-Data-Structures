@@ -1,2 +1,9 @@
-﻿  Final Project.vcxproj -> C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.exe
+﻿  Main.cpp
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(55): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(109): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(128): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(34): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(51): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(68): warning C4101: 'maxtime': unreferenced local variable
+  Final Project.vcxproj -> C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.exe
   Final Project.vcxproj -> C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.pdb (Full PDB)

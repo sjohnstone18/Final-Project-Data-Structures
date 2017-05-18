@@ -14,8 +14,8 @@ private:
 	int timein;
 
 public:
-	bool operator<(Person& better) {
-		return severity < better.getSeverity();
+	bool operator<(const Person& better) const {
+		return severity < better.severity;
 	}
 
 	string getName() {

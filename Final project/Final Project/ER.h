@@ -64,6 +64,7 @@ public:
 					else if (!lowpriority.empty())
 					{
 						staff[i]->helper.push(lowpriority.top());
+						staff[i]->setRealtime();
 						lowpriority.pop();
 					}
 				}
@@ -71,6 +72,7 @@ public:
 					if (!lowpriority.empty())
 					{
 						staff[i]->helper.push(lowpriority.top());
+						staff[i]->setRealtime();
 						lowpriority.pop();
 					}
 				}
@@ -98,8 +100,9 @@ public:
 			}
 	
 			newpatient1->setTimeIn(clock);								//sets start time
-			if (newpatient1->getSeverity() > 10)						//sends to highpriority if higher than 10
+			if (newpatient1->getSeverity() > 10) {						//sends to highpriority if higher than 10
 				highpriority.push(newpatient1);
+			}
 			else
 				lowpriority.push(newpatient1);
 		}

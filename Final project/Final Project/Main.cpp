@@ -99,7 +99,7 @@ int main() {
 
 	file1.close();
 	file2.close();
-	cout << "finished population creation. \n";
+	//cout << "finished population creation. \n";
 	do {
 		simulation->update();
 	} while (simulation->isdone() == false);
