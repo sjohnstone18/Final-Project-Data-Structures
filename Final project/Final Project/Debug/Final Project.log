@@ -2,7 +2,7 @@
 c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\er.h(48): warning C4018: '<': signed/unsigned mismatch
 c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\er.h(95): warning C4018: '<': signed/unsigned mismatch
 c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(33): warning C4018: '<': signed/unsigned mismatch
-c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(49): warning C4018: '<': signed/unsigned mismatch
-c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(61): warning C4101: 'maxtime': unreferenced local variable
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(50): warning C4018: '<': signed/unsigned mismatch
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(62): warning C4101: 'maxtime': unreferenced local variable
   Final Project.vcxproj -> C:\Users\tstitt18\Documents\GitHub\Final\Final-Project-Data-Structures\Final project\Debug\Final Project.exe
   Final Project.vcxproj -> C:\Users\tstitt18\Documents\GitHub\Final\Final-Project-Data-Structures\Final project\Debug\Final Project.pdb (Full PDB)
