@@ -69,16 +69,19 @@ public:
 		}																//end of Doctor update system
 																		//start of new pateint entering
 		Random *random = new Random();
-		if (random->next_int(60) > 45) {
+		int randon = random->next_int(hurtRateHour);
+		int perp = random->next_int(2000);
+		int sev = random->next_int(19) + 1;
+		if (randon > 15) {
 			Person* newpatient1 = population[random->next_int(2000)];	//picks person from the array of population
-			newpatient1->setSeverity(random->next_int(19) + 1);			//assigns severity.  does 19+1 to guarantee no severities of 0
+			newpatient1->setSeverity(sev);			//assigns severity.  does 19+1 to guarantee no severities of 0
 			newpatient1->setTimeIn(clock);								//sets start time
 			if (newpatient1->getSeverity() > 10)						//sends to highpriority if higher than 10
 				highpriority.push(newpatient1);
 			else
 				lowpriority.push(newpatient1);
 		}
-		if (random->next_int(60) > 45) {								//DOES 2 TO REDUCE TO PREVENT 60 PER HOUR TURNING INTO EXACTLY 1/MIN, AND ALLOWS FOR 2 IN 1 MINUTE
+		if (random->next_int(60) > 15) {								//DOES 2 TO REDUCE TO PREVENT 60 PER HOUR TURNING INTO EXACTLY 1/MIN, AND ALLOWS FOR 2 IN 1 MINUTE
 			Person* newpatient2 = population[random->next_int(2000)];	
 			newpatient2->setSeverity(random->next_int(19) + 1);			
 			newpatient2->setTimeIn(clock);								
