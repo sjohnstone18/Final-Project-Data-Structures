@@ -24,6 +24,12 @@ private:
 	int totaltime = 0, numserved = 0;
 
 public:
+	int getTotaltime() {
+		return totaltime;
+	}
+	int getNumberServed() {
+		return numserved;
+	}
 	Person* population[2000];
 	ER(int Docs, int Nurses, int maxtime, int rate) {
 		for (int i = 0; i < Docs; i++)
