@@ -21,7 +21,8 @@ int menu(int u) {
 void opt1(ER* sim) {
 	string name;
 	cout << "Enter a patient name: ";
-	cin >> name;
+	cin.ignore();
+	getline(cin, name);
 	
 
 	bool found = false;
@@ -29,8 +30,8 @@ void opt1(ER* sim) {
 		if (sim->population[i]->getName() == name)
 		{
 			cout << "Patient history:" << endl;
-			for (int i = 0; i < sim->population[i]->getHistory().size(); i++) {
-				cout << "Visit #" << (i + 1) << " severity: " << sim->population[i]->getHistory()[i];
+			for (int j = 0; j < sim->population[i]->getHistory().size(); j++) {
+				cout << "Visit #" << (j + 1) << " severity: " << sim->population[i]->getHistory()[j] << endl << endl;
 			}
 			found = true;
 		}
@@ -41,11 +42,12 @@ void opt1(ER* sim) {
 }
 
 void opt2(ER* sim) {
+	cout << "Patients treated:";
 	for (int i = 0; i < 2000; i++) {
 		if (!sim->population[i]->getHistory().empty()) {
 			cout << sim->population[i]->getName() << endl;
-			for (int j = 0; i < sim->population[i]->getHistory().size(); j++) {
-				cout << "Visit #" << (j + 1) << " severity: " << sim->population[i]->getHistory()[j];
+			for (int j = 0; j < sim->population[i]->getHistory().size(); j++) {
+				cout << "Visit #" << (j + 1) << " severity: " << sim->population[i]->getHistory()[j] << endl;
 			}
 			cout << endl;
 		}
@@ -59,15 +61,13 @@ int main() {
 	int maxtime, docs, nurses, rate;
 
 	cout << "Welcome to Tyler and Sam's Emergency Room simulator\nPlease enter the length of the simulation: ";
-	//cin >> maxtime;
 	cout << "Please enter the number of Doctors: ";
-	//cin >> docs;
+	cin >> docs;
 	cout << "Please enter the Number of Nurses: ";
-	//cin >> nurses;
+	cin >> nurses;
 	cout << "Please enter the rate of Patients arriving in patients per hour: ";
-	//cin >>rate;
-	//ER* simulation = new ER(docs, nurses, maxtime, rate);
-	ER* simulation = new ER(5, 5, 10000, 60000);
+	cin >>rate;
+	ER* simulation = new ER(docs, nurses, 10080, rate);
 	ifstream file1;
 	ifstream file2;
 	file1.open("..\\residents_of_273ville.txt");
