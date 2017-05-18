@@ -22,7 +22,7 @@ int main() {
 	ifstream file2;
 	file1.open("..\\residents_of_273ville.txt");
 	if (file1.fail()) {
-		std::cout << "ERROR file1 failed: ";
+		cout << "ERROR file1 failed: ";
 		return 0;
 	}
 	file2.open("..\\surnames_of_273ville.txt");
@@ -30,36 +30,16 @@ int main() {
 		cout << "ERROR file2 failed";
 		return 0;
 	}
-	string word;
-	word.clear();
-	bool dofirst = true;
-	for(int i= 0; i<2000; i++) {
-		if (dofirst == true) {
-			char character = file1.get();
-			if (isalpha(character))//only does actions if it is a lettered word; adds letters to word
-			{
-				word = word + character;
-			}
-			else if (isspace(character))
-			{
-				word = word + " ";
-				dofirst = false;
-			}
 
+	string first, last, name;
+	int i = 0;
+		while (file1 >> first && file2 >> last && i<2000) {
+			name = first + " " + last;
+			simulation->population[i] = new Person(name);
+			i++;
 		}
-		else {
-			char character = file2.get();
-			if (isalpha(character))//only does actions if it is a lettered word; adds letters to word
-			{
-				word = word + character;
-			}
-			else if (isspace(character))
-			{
-				simulation->population[i] = new Person(word);
-				dofirst = true;
-			}
-		}
-	}
+
+
 	file1.close();
 	file2.close();
 	cout << "finished population creation. \n";
