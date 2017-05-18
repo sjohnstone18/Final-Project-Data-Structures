@@ -1,6 +1,8 @@
-#include  "ER.h"
+
 #include <fstream>
+#include <iostream>
 #include <string>
+#include  "ER.h"
 using namespace std;
 
 int main() {

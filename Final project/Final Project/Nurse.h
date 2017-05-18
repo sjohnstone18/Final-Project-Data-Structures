@@ -16,6 +16,7 @@ public:
 		maxSeverity = 10;
 		timeRange = 10;
 		num_served = 0;
+		realtime = 0;
 	}
 
 
