@@ -9,15 +9,15 @@ int main() {
 	int maxtime, docs, nurses, rate;
 
 	cout << "Welcome to Tyler and Sam's Emergency Room simulator\nPlease enter the length of the simulation: ";
-	cin >> maxtime;
+	//cin >> maxtime;
 	cout << "Please enter the number of Doctors: ";
-	cin >> docs;
+	//cin >> docs;
 	cout << "Please enter the Number of Nurses: ";
-	cin >> nurses;
+	//cin >> nurses;
 	cout << "Please enter the rate of Patients arriving in patients per hour: ";
-	cin >>rate;
-	ER* simulation = new ER(docs, nurses, maxtime, rate);
-	
+	//cin >>rate;
+	//ER* simulation = new ER(docs, nurses, maxtime, rate);
+	ER* simulation = new ER(5, 5, 5, 60);
 	ifstream file1;
 	ifstream file2;
 	file1.open("..\\residents_of_273ville.txt");

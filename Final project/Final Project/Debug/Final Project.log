@@ -1,2 +1,4 @@
-﻿  Final Project.vcxproj -> C:\Users\sjohn\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.exe
-  Final Project.vcxproj -> C:\Users\sjohn\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.pdb (Full PDB)
+﻿  Main.cpp
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(47): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(20): error C2374: 'simulation': redefinition; multiple initialization
+  c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(19): note: see declaration of 'simulation'
