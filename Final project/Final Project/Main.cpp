@@ -5,6 +5,54 @@
 #include  "ER.h"
 using namespace std;
 
+int menu(int u) {
+	do {
+		cout << "SIMULATION STATS:" << endl;
+		cout << "-----------------" << endl;
+		cout << "1) Find patient" << endl;
+		cout << "2) General stats" << endl;
+		cout << "3) Exit" << endl;
+		cout << "Select: ";
+		cin >> u;
+	} while (u != 1 && u != 2 && u != 3);
+	return u;
+}
+
+void opt1(ER* sim) {
+	string name;
+	cout << "Enter a patient name: ";
+	cin >> name;
+	
+
+	bool found = false;
+	for (int i = 0; i < 2000; i++) {
+		if (sim->population[i]->getName() == name)
+		{
+			cout << "Patient history:" << endl;
+			for (int i = 0; i < sim->population[i]->getHistory().size(); i++) {
+				cout << "Visit #" << (i + 1) << " severity: " << sim->population[i]->getHistory()[i];
+			}
+			found = true;
+		}
+	}
+	if (found == false) {
+		cout << "Could not find patient." << endl;
+	}
+}
+
+void opt2(ER* sim) {
+	for (int i = 0; i < 2000; i++) {
+		if (!sim->population[i]->getHistory().empty()) {
+			cout << sim->population[i]->getName() << endl;
+			for (int j = 0; i < sim->population[i]->getHistory().size(); j++) {
+				cout << "Visit #" << (j + 1) << " severity: " << sim->population[i]->getHistory()[j];
+			}
+			cout << endl;
+		}
+	}
+}
+
+
 int main() {
 	
 	
@@ -19,7 +67,7 @@ int main() {
 	cout << "Please enter the rate of Patients arriving in patients per hour: ";
 	//cin >>rate;
 	//ER* simulation = new ER(docs, nurses, maxtime, rate);
-	ER* simulation = new ER(5, 5, 5, 60);
+	ER* simulation = new ER(5, 5, 5, 60000);
 	ifstream file1;
 	ifstream file2;
 	file1.open("..\\residents_of_273ville.txt");
@@ -49,10 +97,19 @@ int main() {
 		simulation->update();
 	} while (simulation->isdone() == false);
 	
-	
-
-
-
+	int user = 0;
+	do {
+		user = menu(0);
+		if (user == 1) {
+			opt1(simulation);
+		}
+		if (user == 2) {
+			opt2(simulation);
+		}
+		if (user == 3) {
+			break;
+		}
+	} while (user);
 
 
 

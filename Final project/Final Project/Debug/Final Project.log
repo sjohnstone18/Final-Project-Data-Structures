@@ -1,4 +1,5 @@
 ﻿  Main.cpp
+<<<<<<< HEAD
 c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(48): warning C4018: '<': signed/unsigned mismatch
 c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(95): warning C4018: '<': signed/unsigned mismatch
 c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(11): warning C4101: 'docs': unreferenced local variable
@@ -7,3 +8,14 @@ c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final 
 c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(11): warning C4101: 'nurses': unreferenced local variable
   Final Project.vcxproj -> C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.exe
   Final Project.vcxproj -> C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.pdb (Full PDB)
+=======
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\er.h(48): warning C4018: '<': signed/unsigned mismatch
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(30): warning C4018: '<': signed/unsigned mismatch
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(45): warning C4018: '<': signed/unsigned mismatch
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(57): warning C4101: 'docs': unreferenced local variable
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(57): warning C4101: 'rate': unreferenced local variable
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(57): warning C4101: 'maxtime': unreferenced local variable
+c:\users\tstitt18\documents\github\final\final-project-data-structures\final project\final project\main.cpp(57): warning C4101: 'nurses': unreferenced local variable
+  Final Project.vcxproj -> C:\Users\tstitt18\Documents\GitHub\Final\Final-Project-Data-Structures\Final project\Debug\Final Project.exe
+  Final Project.vcxproj -> C:\Users\tstitt18\Documents\GitHub\Final\Final-Project-Data-Structures\Final project\Debug\Final Project.pdb (Full PDB)
+>>>>>>> 79effa8dfa6516023b076e2192a70cbbe83296c4
