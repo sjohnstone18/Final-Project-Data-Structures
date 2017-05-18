@@ -67,7 +67,7 @@ int main() {
 	cout << "Please enter the rate of Patients arriving in patients per hour: ";
 	//cin >>rate;
 	//ER* simulation = new ER(docs, nurses, maxtime, rate);
-	ER* simulation = new ER(5, 5, 5, 60000);
+	ER* simulation = new ER(5, 5, 10000, 60000);
 	ifstream file1;
 	ifstream file2;
 	file1.open("..\\residents_of_273ville.txt");

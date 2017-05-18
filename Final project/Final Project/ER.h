@@ -47,7 +47,7 @@ public:
 	{
 		for (int i = 0; i < staff.size(); i++) {
 			if (staff[i]->helper.empty()) {								//If any of the staff are not helping anyone, fetch next person
-				if (typeid(staff[i]) == typeid(Doctor)) {			//if its a doctor, check high priority first. 
+				if (staff[i]->getMax_Severity() == 20) {			//if its a doctor, check high priority first. 
 					if (!highpriority.empty())
 					{
 						staff[i]->helper.push(highpriority.top());
@@ -60,7 +60,7 @@ public:
 						lowpriority.pop();
 					}
 				}
-				if (typeid(staff[i]) == typeid(Nurse)) {				//if its a Nurse, only check low priority
+				else if (staff[i]->getMax_Severity() == 10) {				//if its a Nurse, only check low priority
 					if (!lowpriority.empty())
 					{
 						staff[i]->helper.push(lowpriority.top());

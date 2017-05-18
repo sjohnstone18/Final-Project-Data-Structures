@@ -1,4 +1,11 @@
-﻿  LINK : C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.exe not found or not built by the last incremental link; performing full link
-ER.obj : warning LNK4020: a type record in 'c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\debug\vc140.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+﻿  Main.cpp
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(48): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\er.h(95): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(32): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(47): warning C4018: '<': signed/unsigned mismatch
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(59): warning C4101: 'docs': unreferenced local variable
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(59): warning C4101: 'rate': unreferenced local variable
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(59): warning C4101: 'maxtime': unreferenced local variable
+c:\users\sjohnstone18\desktop\final-project-data-structures\final project\final project\main.cpp(59): warning C4101: 'nurses': unreferenced local variable
   Final Project.vcxproj -> C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.exe
   Final Project.vcxproj -> C:\Users\sjohnstone18\Desktop\Final-Project-Data-Structures\Final project\Debug\Final Project.pdb (Full PDB)
