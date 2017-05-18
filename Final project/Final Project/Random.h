@@ -15,7 +15,7 @@ class Random {
 
 		
 		int next_int(int n) {
-			return int(next_double() * n);
+			return rand() %n;
 		}
 
 		
