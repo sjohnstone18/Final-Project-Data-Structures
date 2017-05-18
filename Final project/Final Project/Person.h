@@ -9,13 +9,13 @@ using namespace std;
 class Person{
 private:
 	string name;
-	int severity;
+	int severity=0;
 	vector<int> history;
 	int timein;
 
 public:
 	bool operator<(Person& better) {
-		return this.severity < better.getSeverity();
+		return severity < better.getSeverity();
 	}
 
 	string getName() {

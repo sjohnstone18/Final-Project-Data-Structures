@@ -15,14 +15,15 @@ using namespace std;
 class ER {
 private:
 	vector<Medical *> staff;
-	priority_queue <Person *, Person.getSeverity(), int> lowpriority; //this needs to change to priority queue
+	priority_queue <Person *> lowpriority; //this needs to change to priority queue
 	priority_queue <Person *> highpriority;
-	Person* population[2000];
+	
 	int clock;//current time in minutes
 	int maxTime; //how long to run simulation
 	int hurtRateHour; //rate of people arriving per hour
 
 public:
+	Person* population[2000];
 	ER(int Docs, int Nurses, int maxtime, int rate) {
 		for (int i = 0; i < Docs; i++)
 		{
@@ -73,24 +74,23 @@ public:
 			newpatient1->setSeverity(random->next_int(19) + 1);			//assigns severity.  does 19+1 to guarantee no severities of 0
 			newpatient1->setTimeIn(clock);								//sets start time
 			if (newpatient1->getSeverity() > 10)						//sends to highpriority if higher than 10
-				highpriority.push_back(newpatient1);
+				highpriority.push(newpatient1);
 			else
-				lowpriority.push_back(newpatient1);
+				lowpriority.push(newpatient1);
 		}
 		if (random->next_int(60) > 45) {								//DOES 2 TO REDUCE TO PREVENT 60 PER HOUR TURNING INTO EXACTLY 1/MIN, AND ALLOWS FOR 2 IN 1 MINUTE
-			Person* newpatient1 = population[random->next_int(2000)];	
-			newpatient1->setSeverity(random->next_int(19) + 1);			
-			newpatient1->setTimeIn(clock);								
-			if (newpatient1->getSeverity() > 10)						
-				highpriority.push_back(newpatient1);
+			Person* newpatient2 = population[random->next_int(2000)];	
+			newpatient2->setSeverity(random->next_int(19) + 1);			
+			newpatient2->setTimeIn(clock);								
+			if (newpatient2->getSeverity() > 10)						
+				highpriority.push(newpatient2);
 			else
-				lowpriority.push_back(newpatient1);
+				lowpriority.push(newpatient2);
 		}
 
 		clock++;
 	}
-
-
+	
 
 };
 
