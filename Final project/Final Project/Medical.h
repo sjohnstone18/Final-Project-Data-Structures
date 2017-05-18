@@ -38,12 +38,12 @@ void setRealtime() {
 	realtime = random.next_int(timeRange - 1) + 1;
 }
 void clearPatient() {
+	helper.front()->sethistory();
 	helper.front()->setSeverity(0);
 	helper.front()->setTimeIn(0);
 	if (!helper.empty())
 		helper.pop();
-	if (helper.size() != 0) {
-		cout << "Error: medical queue is not empty after purging patient\n";
+
 	}
 }
 	

@@ -36,7 +36,9 @@ public:
 	void setTimeIn(int ti) {
 		timein = ti;
 	}
-
+	void sethistory() {
+		history.push_back(severity);
+	}
 	Person(string nm) {
 		name = nm;
 		history.clear();
