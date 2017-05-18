@@ -61,7 +61,7 @@ int main() {
 	
 	int maxtime, docs, nurses, rate;
 
-	cout << "Welcome to Tyler and Sam's Emergency Room simulator\nPlease enter the length of the simulation: ";
+	cout << "Welcome to Tyler and Sam's Emergency Room simulator\n";
 	cout << "Please enter the number of Doctors: ";
 	cin >> docs;
 	cout << "Please enter the Number of Nurses: ";
@@ -98,6 +98,8 @@ int main() {
 		simulation->update();
 	} while (simulation->isdone() == false);
 	
+	simulation->calcItALL();
+
 	int user = 0;
 	do {
 		user = menu(0);

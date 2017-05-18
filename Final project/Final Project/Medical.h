@@ -27,6 +27,9 @@ public:
 	int getRealtime() {
 		return realtime;
 	}
+	int gettotaltime() {
+		return totaltime;
+	}
 queue<Person*> helper;
 void addTime(int time) {
 	totaltime += time;
